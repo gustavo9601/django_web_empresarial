@@ -15,7 +15,3 @@ def about(request: WSGIRequest):
 def store(request: WSGIRequest):
     return render(request=request, template_name='core/store.html')
 
-
-def contact(request: WSGIRequest):
-    return render(request=request, template_name='core/contact.html')
-

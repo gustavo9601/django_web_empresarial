@@ -30,6 +30,9 @@ urlpatterns = [
     # Pages
     path('pages/', include('pages.urls')),
 
+    # Contact
+    path('contact/', include('contact.urls')),
+
     # Admin dashboard
     path('admin/', admin.site.urls),
 
