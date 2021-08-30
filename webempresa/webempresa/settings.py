@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'ckeditor',
     # apps
     'core',
     'blog',
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     # Redes sociales
     'social.apps.SocialConfig',
     # 'services'
-    'services.apps.ServicesConfig' # En ves de la app directamente se carga una configuracion de la app
+    'services.apps.ServicesConfig'  # En ves de la app directamente se carga una configuracion de la app
 ]
 
 MIDDLEWARE = [
@@ -135,3 +135,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Media Config
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Config CKeditor
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None
+    }
+}

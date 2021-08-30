@@ -15,7 +15,8 @@
               <span class="section-heading-lower">{{ page.title }}</span>
             </h2>
             <div class="section-content">
-                {{ page.content | linebreaks }}
+            {#safe // permite que django interprete el html#}
+                {{ page.content | safe }}
 
                 {#Verificando si esta autenticado el usuario#}
                 {% if user.is_authenticated %}
