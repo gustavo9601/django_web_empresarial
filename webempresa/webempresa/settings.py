@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     # apps
     'core',
     'blog',
+    # Redes sociales
+    'social.apps.SocialConfig',
     # 'services'
     'services.apps.ServicesConfig' # En ves de la app directamente se carga una configuracion de la app
 ]
@@ -67,6 +69,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                # Añadiendo nuestro processors, extendiendo nuevos keys a cualquier contexto enviado a las vistas
+                'social.processors.context_dict'
             ],
         },
     },
