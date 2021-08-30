@@ -4,6 +4,7 @@ from .models import Page
 # Register your models here.
 class PageAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'updated_at')
+    list_display = ('title', 'order', 'created_at')
 
 # Registrando
 admin.site.register(Page, PageAdmin)
