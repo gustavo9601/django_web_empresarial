@@ -19,10 +19,5 @@ def store(request: WSGIRequest):
 def contact(request: WSGIRequest):
     return render(request=request, template_name='core/contact.html')
 
-
-def blog(request):
-    return render(request=request, template_name='core/blog.html')
-
-
 def sample(request):
     return render(request=request, template_name='core/sample.html')

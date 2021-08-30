@@ -24,6 +24,9 @@ urlpatterns = [
     # Services
     path('services/', include('services.urls')),
 
+    # Blog
+    path('blog/', include('blog.urls')),
+
     # Admin dashboard
     path('admin/', admin.site.urls),
 

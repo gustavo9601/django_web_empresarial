@@ -26,8 +26,10 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Fecha creacion')
     updated_at = models.DateField(auto_now=True, verbose_name='Fecha actualizacion')
     #  Campos con relaciones a otros modelos
-    author = models.ForeignKey(User, verbose_name='Autor', on_delete=models.CASCADE) # muchos a uno
-    categories = models.ManyToManyField(Category, verbose_name='Categorias')  # relacion muchos a muchos
+    author = models.ForeignKey(User, verbose_name='Autor', on_delete=models.CASCADE,
+                               related_name='get_author')  # muchos a uno
+    categories = models.ManyToManyField(Category, verbose_name='Categorias',
+                                        related_name='get_posts')  # relacion muchos a muchos
 
     class Meta:
         verbose_name = 'entrada'
