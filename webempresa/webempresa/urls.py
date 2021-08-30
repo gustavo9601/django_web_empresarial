@@ -27,6 +27,9 @@ urlpatterns = [
     # Blog
     path('blog/', include('blog.urls')),
 
+    # Pages
+    path('pages/', include('pages.urls')),
+
     # Admin dashboard
     path('admin/', admin.site.urls),
 
